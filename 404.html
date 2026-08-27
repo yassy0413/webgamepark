@@ -2,13 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/webgamepark/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- maximum-scale=1: iOSでテキスト入力フォーカス時の自動ズームを禁止（ピンチ含む全体のズーム禁止） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#090b18" />
     <meta name="description" content="3Dミニゲームを集めたブラウザの遊園地、Palm Joy Game Park" />
     <title>Palm Joy Game Park</title>
-    <script type="module" crossorigin src="/webgamepark/assets/index-D5EZsWcM.js"></script>
-    <link rel="stylesheet" crossorigin href="/webgamepark/assets/index-DqPUXRKG.css">
+
+    <!-- PROD-ONLY:START -->
+    <!-- Google AdSense。dev サーバーでは vite.config.ts の htmlBuildFlags が
+         このブロックごと除去する（ローカル表示を広告インプレッションとして計上させないため）。 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003"
+      crossorigin="anonymous"></script>
+    <!-- PROD-ONLY:END -->
+    <script type="module" crossorigin src="/assets/index-XhEliQht.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D0vc4xRe.css">
   </head>
   <body>
     <div id="root"></div>
