@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#090b18" />
     <meta name="description" content="3Dミニゲームを集めたブラウザの遊園地、Palm Joy Game Park" />
+    <!-- 正規URL。SPAのため全ルートで同じ値になるが、ゲーム個別ページはGitHub Pagesの仕様上
+         HTTP 404を返しインデックスされないため実害はない。旧URL（*.github.io/webgamepark/）から
+         評価をこのドメインへ寄せる役割も持つ。ルートごとに出し分けたくなったらReact側で書き換える。 -->
+    <link rel="canonical" href="https://palm-joy-game-park.com/" />
     <title>Palm Joy Game Park</title>
 
     <!-- PROD-ONLY:START -->
     <!-- Google AdSense。dev サーバーでは vite.config.ts の htmlBuildFlags が
          このブロックごと除去する（ローカル表示を広告インプレッションとして計上させないため）。 -->
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003"
       crossorigin="anonymous"></script>
     <!-- PROD-ONLY:END -->
