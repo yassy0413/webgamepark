@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://palm-joy-game-park.com/sitemap.xml

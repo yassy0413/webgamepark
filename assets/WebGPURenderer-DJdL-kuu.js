@@ -1,1 +1,0 @@
-import{WebGPURenderer as e}from"./lib-0Khv1bhH.js";export{e as WebGPURenderer};

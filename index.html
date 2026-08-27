@@ -1,27 +1,32 @@
 <!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- maximum-scale=1: iOSでテキスト入力フォーカス時の自動ズームを禁止（ピンチ含む全体のズーム禁止） -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="theme-color" content="#090b18" />
-    <meta name="description" content="3Dミニゲームを集めたブラウザの遊園地、Palm Joy Game Park" />
-    <!-- 正規URL。SPAのため全ルートで同じ値になるが、ゲーム個別ページはGitHub Pagesの仕様上
-         HTTP 404を返しインデックスされないため実害はない。旧URL（*.github.io/webgamepark/）から
-         評価をこのドメインへ寄せる役割も持つ。ルートごとに出し分けたくなったらReact側で書き換える。 -->
-    <link rel="canonical" href="https://palm-joy-game-park.com/" />
-    <title>Palm Joy Game Park</title>
+    <meta charset="UTF-8">
 
-    <!-- PROD-ONLY:START -->
-    <!-- Google AdSense。dev サーバーでは vite.config.ts の htmlBuildFlags が
-         このブロックごと除去する（ローカル表示を広告インプレッションとして計上させないため）。 -->
-    <meta name="google-adsense-account" content="ca-pub-5453239432432003" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003"
-      crossorigin="anonymous"></script>
-    <!-- PROD-ONLY:END -->
-    <script type="module" crossorigin src="/assets/index-XhEliQht.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D0vc4xRe.css">
+    <!-- 共通の head（charset / viewport / favicon / OGP共通分 / AdSense）は
+         vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
+    <title>Palm Joy Game Park</title>
+    <meta name="description" content="3Dミニゲームを集めたブラウザの遊園地、Palm Joy Game Park" />
+    <link rel="canonical" href="https://palm-joy-game-park.com/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/" />
+    <meta property="og:title" content="Palm Joy Game Park" />
+    <meta property="og:description" content="3Dミニゲームを集めたブラウザの遊園地、Palm Joy Game Park" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#090b18">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Palm Joy Game Park">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://palm-joy-game-park.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
+    <script type="module" crossorigin src="/assets/main-Bv_BGGHy.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-DHbqNTPL.js">
+    <link rel="stylesheet" crossorigin href="/assets/jsx-runtime-DwnnDHQT.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-7tVs0JUU.css">
   </head>
   <body>
     <div id="root"></div>
