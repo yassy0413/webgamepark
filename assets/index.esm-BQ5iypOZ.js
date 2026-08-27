@@ -1,1 +1,0 @@
-import{d as e,f as t,p as n}from"./index.esm-BAmsw1Kl.js";t(`firebase`,`12.18.0`,`app`);export{e as initializeApp,n as setLogLevel};

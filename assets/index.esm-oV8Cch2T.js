@@ -1,0 +1,1 @@
+import{d as e,f as t,m as n,p as r,u as i}from"./index.esm-CuPcQWPt.js";r(`firebase`,`12.18.0`,`app`);export{i as getApp,e as getApps,t as initializeApp,n as setLogLevel};
