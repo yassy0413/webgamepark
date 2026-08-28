@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- 文章ページはJSを持たない素のHTMLなので、万一ビルドを通さずに配信されても
+         日本語が化けないよう charset だけ明示しておく（重複しても先頭の指定が使われる）。 -->
+    <meta charset="UTF-8" />
+    <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
+         vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
+    <title>お問い合わせ | Palm Joy Game Park</title>
+    <meta name="description" content="Palm Joy Game Park へのお問い合わせフォーム。ゲームの不具合報告やご意見はこちらから。個別の返信は行っていません。" />
+    <link rel="canonical" href="https://palm-joy-game-park.com/contact/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/contact/" />
+    <meta property="og:title" content="お問い合わせ | Palm Joy Game Park" />
+    <meta property="og:description" content="ゲームの不具合報告やご意見はこちらから。個別の返信は行っていません。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#090b18">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Palm Joy Game Park">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://palm-joy-game-park.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
+    <link rel="stylesheet" crossorigin href="/assets/pages-Cfw9FDmy.css">
+  </head>
+  <body>
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a></header>
+    <main>
+      <h1>お問い合わせ</h1>
+      <p class="lead">ゲームの不具合の報告、ご意見・ご要望、掲載内容についてのご連絡は、以下のフォームからお送りください。</p>
+
+      <p>いただいた内容はすべて確認し、今後の制作や修正の参考にしています。ただし、<strong>個別のご返信は行っていません</strong>のであらかじめご了承ください。お返事は差し上げられませんので、連絡先の記入は不要です。</p>
+
+      <div class="note">
+        不具合の報告をいただく際は、<strong>どのゲームのどの画面で起きたか</strong>を具体的に書いていただけると、原因を特定しやすくなり助かります。お使いの端末とブラウザは、フォーム内の項目にご記入ください。
+      </div>
+
+      <h2>フォーム</h2>
+      <!-- Googleフォームの埋め込み。フォームを差し替えるときは、フォーム編集画面の
+           [送信] → <> タブに表示される iframe の src をここに貼り替える。 -->
+      <iframe
+        class="form-frame"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScMj4UEetRpBWoETnl-iF-HcfzlH8jarK28qkzjUilXQ4n7mA/viewform?embedded=true"
+        title="お問い合わせフォーム"
+        loading="lazy"
+        >読み込んでいます…</iframe>
+
+      <p style="font-size:13px;color:#4a5f72;">フォームが表示されない場合は、ブラウザの拡張機能や設定によって埋め込みがブロックされている可能性があります。その場合はお手数ですが、別のブラウザからお試しください。</p>
+
+      <p>送信いただいた内容の取り扱いについては、<a href="/privacy/">プライバシーポリシー</a>をご確認ください。</p>
+    </main>
+    <footer class="site-footer">
+      <nav>
+        <a href="/">ホーム</a><a href="/privacy/">プライバシーポリシー</a>
+      </nav>
+      <div>© 2026 Palm Joy Game Park</div>
+    </footer>
+  </body>
+</html>

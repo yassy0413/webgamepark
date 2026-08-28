@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- 文章ページはJSを持たない素のHTMLなので、万一ビルドを通さずに配信されても
+         日本語が化けないよう charset だけ明示しておく（重複しても先頭の指定が使われる）。 -->
+    <meta charset="UTF-8" />
+    <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
+         vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
+    <title>軍師大戦の遊び方とコツ | Palm Joy Game Park</title>
+    <meta name="description" content="ブラウザRTS「軍師大戦」の遊び方。部隊の編成、兵種ごとの性能、側面・背面攻撃の倍率、陣形の使い分けまでまとめて解説します。" />
+    <link rel="canonical" href="https://palm-joy-game-park.com/guides/strategists-war/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/guides/strategists-war/" />
+    <meta property="og:title" content="軍師大戦の遊び方とコツ | Palm Joy Game Park" />
+    <meta property="og:description" content="部隊の編成、兵種ごとの性能、側面・背面攻撃の倍率、陣形の使い分けまで解説します。" />
+    <!-- 日本語版と英語版は別URL。検索エンジンに対応関係を伝える -->
+    <link rel="alternate" hreflang="ja" href="https://palm-joy-game-park.com/guides/strategists-war/" />
+    <link rel="alternate" hreflang="en" href="https://palm-joy-game-park.com/guides/strategists-war/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://palm-joy-game-park.com/guides/strategists-war/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#090b18">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Palm Joy Game Park">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://palm-joy-game-park.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
+    <link rel="stylesheet" crossorigin href="/assets/pages-Cfw9FDmy.css">
+  </head>
+  <body>
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a><a class="page-lang" href="/guides/strategists-war/en/" hreflang="en" lang="en">English</a></header>
+    <main>
+      <h1>軍師大戦の遊び方とコツ</h1>
+      <p class="lead">銃器がまだ生まれていない時代の戦を、軍師の立場で指揮するリアルタイムストラテジーです。資源集めや建物の建設はありません。勝敗を決めるのは、戦いが始まる前に組み上げた陣形と、戦場でどこへ部隊を送るかの判断だけです。</p>
+
+      <a class="play-link" href="/games/strategists-war/">軍師大戦をプレイする</a>
+
+      <h2>勝利条件</h2>
+      <p>1回の戦いは5分です。勝ち方は2通りあります。</p>
+      <ul>
+        <li><strong>敵の軍師を討ち取る</strong>。その瞬間に決着します。</li>
+        <li>5分が経過した時点で<strong>生き残っている兵の数が多い</strong>ほうが勝ちます。同数なら引き分けです。</li>
+      </ul>
+      <p>ここで見落としやすいのが、生存数の数え方が「ユニット数」であることです。コストの重い騎兵は1体で強いのですが、数の勝負では歩兵1体と同じ1体として数えられます。時間切れ狙いなら安い歩兵を並べたほうが有利で、短期決戦を狙うなら機動力に投資する、という選択がここで生まれます。</p>
+
+      <h2>準備から出撃までの3ステップ</h2>
+      <h3>1. 部隊をつくる</h3>
+      <p>FORMATION画面で、11×11のマスに兵を置いて部隊をつくります。1部隊に使えるのは<strong>20コストまで</strong>。歩兵は1コスト、騎兵は2コストなので、歩兵だけなら20体、騎兵だけなら10体が上限です。部隊は20個まで保存できます。</p>
+      <p>初回起動時に、楔形陣・ファランクス・亀甲陣・盾壁・横隊・縦隊・方陣・三日月形陣の8種類が最初から入っているので、まずはそのまま出撃して感触をつかむのがおすすめです。</p>
+
+      <h3>2. 軍をつくる</h3>
+      <p>つくった部隊を最大10個選び、7×7のマスに配置したものが「軍」です。行が小さいほど前方に展開されます。同じ部隊を何度使っても構いません。10部隊そろっていなくても、1部隊以上あれば出撃できます。</p>
+      <p>忘れてはいけないのが<strong>軍師の配置</strong>です。10部隊のうちどれか1つを選び、その部隊の空きマスに軍師を置いて初めて出撃できます。</p>
+
+      <h3>3. 戦う</h3>
+      <p>戦場でのプレイヤーの操作は<strong>部隊を選んで移動先を指示すること、それだけ</strong>です。攻撃は自動で行われます。部隊をタッチ（クリック）して、行かせたい場所までスワイプ（ドラッグ）すれば移動します。画面はピンチやホイールで拡大縮小できます。</p>
+
+      <h2>兵種ごとの性能</h2>
+      <p>7種類の兵がいます。数値はゲーム内の初期値です。</p>
+      <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>兵種</th><th class="num">コスト</th><th class="num">HP</th><th class="num">攻撃力</th><th class="num">射程</th><th class="num">攻撃間隔</th><th class="num">移動速度</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>歩兵（盾）</td><td class="num">1</td><td class="num">200</td><td class="num">5</td><td class="num">1.0</td><td class="num">1.0秒</td><td class="num">0.8</td></tr>
+          <tr><td>歩兵（剣）</td><td class="num">1</td><td class="num">100</td><td class="num">10</td><td class="num">1.0</td><td class="num">1.0秒</td><td class="num">1.0</td></tr>
+          <tr><td>歩兵（槍）</td><td class="num">1</td><td class="num">100</td><td class="num">10</td><td class="num">1.5</td><td class="num">1.5秒</td><td class="num">1.0</td></tr>
+          <tr><td>歩兵（弓）</td><td class="num">1</td><td class="num">80</td><td class="num">8</td><td class="num">8.0</td><td class="num">2.5秒</td><td class="num">1.0</td></tr>
+          <tr><td>騎兵（剣）</td><td class="num">2</td><td class="num">100</td><td class="num">10</td><td class="num">1.0</td><td class="num">1.0秒</td><td class="num">3.0</td></tr>
+          <tr><td>騎兵（槍）</td><td class="num">2</td><td class="num">100</td><td class="num">10</td><td class="num">1.5</td><td class="num">1.5秒</td><td class="num">3.0</td></tr>
+          <tr><td>騎兵（弓）</td><td class="num">2</td><td class="num">80</td><td class="num">8</td><td class="num">8.0</td><td class="num">2.5秒</td><td class="num">3.0</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>射程の「1.0」は、編成画面のマス1つ分の距離です。弓の射程8は、マス8つ分だけ離れた相手を撃てるという意味になります。</p>
+
+      <h2>知っておくと勝率が変わる5つのルール</h2>
+
+      <h3>側面は2倍、背面は3倍</h3>
+      <p>ダメージには向きが関係します。正面から見て前方45度の範囲が正面、後方135度を超える範囲が背面、その間が側面です。<strong>側面から攻撃すると2倍、背面からなら3倍</strong>のダメージが入ります。正面からぶつかり合っている部隊の横や後ろへ騎兵を回り込ませられれば、同じ兵力でも戦果はまるで違います。逆に言えば、自分の部隊の背中を敵に見せたまま放置するのが一番危険です。</p>
+
+      <h3>部隊の速度は一番遅い兵に合わせる</h3>
+      <p>部隊は陣形を保ったまま一体で動くので、<strong>移動速度は所属している兵の中で最も遅いものに合わせられます</strong>。速度3.0の騎兵に速度0.8の盾兵を1体混ぜると、その部隊は0.8で歩きます。さらに軍師の速度は1.0固定でこの計算に含まれるため、騎兵部隊に軍師を置くと部隊全体が1.0まで落ちます。機動力を活かしたい部隊には、混ぜものをしないことです。</p>
+
+      <h3>戦闘は自動で始まる</h3>
+      <p>待機中の部隊は、敵が部隊の最大射程内に入るか、距離5.0以内まで近づくと自動的に戦闘を始めます。弓を含む部隊は射程8で反応するので、こちらが意図するよりずっと手前で足を止めることがあります。前線を押し上げたいときは、弓部隊と近接部隊を別々に動かすと扱いやすくなります。</p>
+
+      <h3>矢は当たるとは限らない</h3>
+      <p>弓が放った矢は、発射した瞬間に狙った位置へ向かって直進します。追尾はしません。着弾点の半径0.5マス以内に敵がいれば当たり、いなければ外れます。つまり<strong>速く動いている騎兵は矢を避けられる</strong>ことがあります。弓は止まっている密集した相手にこそ効きます。なお遮蔽の概念はないので、味方の頭越しに撃てます。</p>
+
+      <h3>陣形の向きは記憶される</h3>
+      <p>編成画面で兵の向きを固定（LOCK）しておくと、その角度は「部隊の正面から見た相対角度」として保存されます。戦闘中は部隊が向いている方向を基準に適用されるため、方陣や亀甲陣のように全方位へ兵を向けた陣形は、移動して向きが変わっても全周防御を保てます。</p>
+
+      <h2>編成のコツ</h2>
+      <ul>
+        <li><strong>軍師は前に出さない</strong>。軍師が倒れれば即敗北です。後方に置く部隊へ配属し、その部隊には移動指示をあまり出さないのが安全です。ただし軍師が所属する部隊の兵は攻撃力が2倍になるので、あえて主力に混ぜて短期決戦を狙う選択もあります。</li>
+        <li><strong>盾兵は壁として使う</strong>。HP200は他の倍ですが攻撃力は5しかありません。前列に盾、後列に剣や槍を置くことで、削られる役と削る役を分けられます。</li>
+        <li><strong>槍は間合いで勝つ</strong>。射程1.5は剣の1.0より長く、密集した相手に先に手が届きます。攻撃間隔は1.5秒と遅いので、単体で殴り合うより列を組ませたほうが噛み合います。</li>
+        <li><strong>騎兵は迂回に使う</strong>。速度3.0は歩兵の3倍です。正面からぶつけるのではなく、大きく回り込ませて敵の背面を取るのが本来の役割です。</li>
+        <li><strong>数を捨てない</strong>。勝敗が生存数で決まる以上、コスト1の歩兵を並べた部隊は時間切れの局面で強く働きます。</li>
+      </ul>
+
+      <h2>対戦のしかた</h2>
+      <p>SINGLE PLAY ではAIを相手に2〜4人の戦いができます。MULTI PLAY では、発行された6文字のルームコードを相手に伝えて対戦するほか、ランダムマッチで待機中の相手と自動的につながることもできます。4人戦では2対2のチーム戦も選べます。チーム戦では味方の軍師が倒れても操作は続けられますが、自軍の移動速度が20%下がり、両方の軍師が倒れた時点で敗北です。</p>
+
+      <a class="play-link" href="/games/strategists-war/">軍師大戦をプレイする</a>
+    </main>
+    <footer class="site-footer">
+      <nav>
+        <a href="/">ホーム</a><a href="/guides/stacked-formula/">輝演算の遊び方</a><a href="/privacy/">プライバシーポリシー</a><a href="/contact/">お問い合わせ</a>
+      </nav>
+      <div>© 2026 Palm Joy Game Park</div>
+    </footer>
+  </body>
+</html>

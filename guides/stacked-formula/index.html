@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- 文章ページはJSを持たない素のHTMLなので、万一ビルドを通さずに配信されても
+         日本語が化けないよう charset だけ明示しておく（重複しても先頭の指定が使われる）。 -->
+    <meta charset="UTF-8" />
+    <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
+         vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
+    <title>輝演算の遊び方とタイムを縮めるコツ | Palm Joy Game Park</title>
+    <meta name="description" content="暗算タイムアタック「輝演算」の遊び方。答えが必ず1桁になる仕組み、6つのレベルの違い、先読みでタイムを縮めるコツを解説します。" />
+    <link rel="canonical" href="https://palm-joy-game-park.com/guides/stacked-formula/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/guides/stacked-formula/" />
+    <meta property="og:title" content="輝演算の遊び方とタイムを縮めるコツ | Palm Joy Game Park" />
+    <meta property="og:description" content="答えが必ず1桁になる仕組み、6つのレベルの違い、先読みでタイムを縮めるコツを解説します。" />
+    <!-- 日本語版と英語版は別URL。検索エンジンに対応関係を伝える -->
+    <link rel="alternate" hreflang="ja" href="https://palm-joy-game-park.com/guides/stacked-formula/" />
+    <link rel="alternate" hreflang="en" href="https://palm-joy-game-park.com/guides/stacked-formula/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://palm-joy-game-park.com/guides/stacked-formula/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#090b18">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Palm Joy Game Park">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://palm-joy-game-park.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
+    <link rel="stylesheet" crossorigin href="/assets/pages-Cfw9FDmy.css">
+  </head>
+  <body>
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a><a class="page-lang" href="/guides/stacked-formula/en/" hreflang="en" lang="en">English</a></header>
+    <main>
+      <h1>輝演算の遊び方とタイムを縮めるコツ</h1>
+      <p class="lead">出てくる式を片端から解いていく、暗算のタイムアタックです。計算そのものより「どれだけ手を止めずに続けられるか」を競うゲームになっています。</p>
+
+      <a class="play-link" href="/games/stacked-formula/">輝演算をプレイする</a>
+
+      <h2>答えは必ず0〜9の1桁</h2>
+      <p>このゲームの一番の特徴は、<strong>出題される式の答えが必ず0から9のあいだに収まる</strong>ことです。そのため回答はテンキーを1回タップするだけで確定します。「12」と入力してから確定ボタンを押す、といった手順がないので、入力の速さがタイムを左右しません。純粋に、頭の中で答えが出るまでの時間だけが記録に乗ります。</p>
+      <p>PCで遊ぶ場合はキーボードの数字キーでも回答できます。</p>
+
+      <h2>先が見えているから、先読みできる</h2>
+      <p>画面には問題が<strong>5行分</strong>積まれていて、一番下が今答えるべき式です。1問答えるたびに1行ずつ下りてきます。つまり次の問題も、その次の問題も最初から見えています。今の式を解きながら次の式に目を走らせられる人ほど速くなる、という設計です。タイムを縮める鍵はここにあります。</p>
+
+      <h2>レベルと問題数</h2>
+      <p>レベルは6種類あり、すべて最初から選べます。数字の個数と、使われる演算子の組み合わせで決まります。</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>表記</th><th class="num">数字の個数</th><th>使う演算子</th><th>目安</th></tr></thead>
+        <tbody>
+          <tr><td>2+-</td><td class="num">2</td><td>+ −</td><td>いちばん易しい。ウォームアップ向き</td></tr>
+          <tr><td>2+-*/</td><td class="num">2</td><td>+ − × ÷</td><td>掛け算・割り算に慣れる</td></tr>
+          <tr><td>3+-</td><td class="num">3</td><td>+ −</td><td>2手続けて計算する練習</td></tr>
+          <tr><td>3+-*/</td><td class="num">3</td><td>+ − × ÷</td><td>計算の優先順位が絡み始める</td></tr>
+          <tr><td>4+-</td><td class="num">4</td><td>+ −</td><td>頭の中で数を持ち続ける力が要る</td></tr>
+          <tr><td>4+-*/</td><td class="num">4</td><td>+ − × ÷</td><td>最難関</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>問題数は20問・30問・50問から選べます。ベストタイムは<strong>レベルと問題数の組み合わせごと</strong>に記録されるので、「3+- の20問」と「3+- の50問」は別々の記録になります。</p>
+
+      <h2>式のルール</h2>
+      <ul>
+        <li>使われる数字は<strong>1から9</strong>まで。0は出てきません。</li>
+        <li>計算の順序は算数どおりで、<strong>×と÷が先</strong>、同じ強さなら左から順に計算します。括弧は出てきません。</li>
+        <li>割り算は<strong>必ず割り切れます</strong>。小数や余りが出る式は出題されません。</li>
+        <li>途中の結果は2桁になっても、マイナスになっても構いません。最終的な答えだけが0〜9に収まります。たとえば「9+8−9」や「1−2+3」のような式が出ます。</li>
+        <li>×÷を含むレベルでは、<strong>必ず×か÷が1つ以上入った式</strong>だけが出題されます。足し算引き算だけの式は混ざりません。</li>
+      </ul>
+
+      <h2>不正解のペナルティ</h2>
+      <p>間違えると<strong>1秒間テンキーが反応しなくなり</strong>、その問題は消化されずに残ります。当てずっぽうで押すと、待たされたうえに問題も減らないので、二重に損をします。特に残り問数が少ない場面では、迷ったら一呼吸おいて確実に押したほうが結果的に速く終わります。</p>
+
+      <h2>タイムを縮める5つのコツ</h2>
+      <ol>
+        <li><strong>今の式を解きながら、次の行を見る</strong>。これが最も効きます。答えを押した直後にゼロから読み始めるのと、すでに読み終えているのとでは、1問あたり0.5秒近く変わります。50問なら25秒の差です。</li>
+        <li><strong>×÷レベルでは演算子から見る</strong>。×か÷が必ず入っているので、まずそこを見つけて先に処理すると、式全体の見通しが一気に良くなります。</li>
+        <li><strong>答えが1桁だと知っていることを使う</strong>。たとえば「8×7」で始まる式なら、その後に必ず大きく割るか引く操作が来ると分かります。計算しきる前に候補を絞れる場面があります。</li>
+        <li><strong>短いレベルで指を慣らす</strong>。2+-の20問を数回まわしてからだと、テンキーの位置に指が慣れて誤タップが減ります。</li>
+        <li><strong>テンキー配置を自分に合わせる</strong>。設定画面で、上段が789の電卓配列と、上段が123の電話配列を切り替えられます。ふだん使い慣れているほうにすると、押し間違いが目に見えて減ります。</li>
+      </ol>
+
+      <h2>記録とランキング</h2>
+      <p>ベストタイムは端末に保存され、オンラインランキングにも送られます。ランキング画面では、レベルと問題数を切り替えながら上位20件と自分の順位を確認できます。自分が全体のどのあたりにいるかは、リザルト画面のピラミッドでも表示されます。</p>
+      <p>設定画面からGoogleアカウントを連携しておくと、記録をアカウントに紐づけられます。連携は記録の引き継ぎだけに使うもので、メールの送信や連絡先の取得は行いません。すでに記録のあるアカウントへ連携する場合は、この端末の記録がアカウント側の記録で上書きされる旨の確認が入ります。</p>
+
+      <h2>ちょっとした遊び</h2>
+      <p>スタートボタンの上に墨絵のフクロウがとまっています。タップすると飛び立ちますが、連続で何回タップできたかがひそかに記録されています。5回以上になると設定画面に項目が現れるので、探してみてください。</p>
+
+      <a class="play-link" href="/games/stacked-formula/">輝演算をプレイする</a>
+    </main>
+    <footer class="site-footer">
+      <nav>
+        <a href="/">ホーム</a><a href="/guides/strategists-war/">軍師大戦の遊び方</a><a href="/privacy/">プライバシーポリシー</a><a href="/contact/">お問い合わせ</a>
+      </nav>
+      <div>© 2026 Palm Joy Game Park</div>
+    </footer>
+  </body>
+</html>

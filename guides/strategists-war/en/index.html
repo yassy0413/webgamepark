@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- 文章ページはJSを持たない素のHTMLなので、万一ビルドを通さずに配信されても
+         文字が化けないよう charset だけ明示しておく（重複しても先頭の指定が使われる）。 -->
+    <meta charset="UTF-8" />
+    <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
+         vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
+    <title>How to Play Strategists’ War | Palm Joy Game Park</title>
+    <meta name="description" content="How to play Strategists’ War, a browser RTS. Building squads, unit stats, flank and rear damage multipliers, and how to use each formation." />
+    <link rel="canonical" href="https://palm-joy-game-park.com/guides/strategists-war/en/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/guides/strategists-war/en/" />
+    <meta property="og:title" content="How to Play Strategists’ War | Palm Joy Game Park" />
+    <meta property="og:description" content="Building squads, unit stats, flank and rear damage multipliers, and how to use each formation." />
+    <!-- 日本語版と英語版は別URL。検索エンジンに対応関係を伝える -->
+    <link rel="alternate" hreflang="ja" href="https://palm-joy-game-park.com/guides/strategists-war/" />
+    <link rel="alternate" hreflang="en" href="https://palm-joy-game-park.com/guides/strategists-war/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://palm-joy-game-park.com/guides/strategists-war/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#090b18">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Palm Joy Game Park">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://palm-joy-game-park.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
+    <link rel="stylesheet" crossorigin href="/assets/pages-Cfw9FDmy.css">
+  </head>
+  <body>
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a><a class="page-lang" href="/guides/strategists-war/" hreflang="ja" lang="ja">日本語</a></header>
+    <main>
+      <h1>How to Play Strategists’ War</h1>
+      <p class="lead">Strategists’ War is a real-time strategy game set in an age before firearms, played from the position of the commanding strategist. There is no resource gathering and no base building. Battles are decided by the formations you assemble before the fighting starts, and by where you choose to send your squads once it does.</p>
+
+      <a class="play-link" href="/games/strategists-war/">Play Strategists’ War</a>
+
+      <h2>How you win</h2>
+      <p>A battle lasts five minutes. There are two ways to win.</p>
+      <ul>
+        <li><strong>Kill the enemy strategist.</strong> The battle ends the moment it happens.</li>
+        <li>When five minutes run out, the side with <strong>more surviving soldiers</strong> wins. Equal numbers is a draw.</li>
+      </ul>
+      <p>What is easy to miss is that survivors are counted as <em>units</em>. A cavalryman costs twice as much and is far stronger, but in the final count he is one body, exactly like a single infantryman. If you intend to win on time, cheap infantry serve you better; if you intend to end it early, invest in mobility. That trade-off is the heart of army building.</p>
+
+      <h2>Three steps from preparation to battle</h2>
+      <h3>1. Build a squad</h3>
+      <p>On the FORMATION screen you place soldiers on an 11×11 grid to build a squad. Each squad may spend up to <strong>20 cost</strong>. Infantry cost 1 and cavalry cost 2, so a squad is at most 20 infantry or 10 cavalry. You can save up to 20 squads.</p>
+      <p>Eight formations are included from the first launch: Wedge, Phalanx, Testudo, Shieldwall, Line, Column, Square and Crescent. Taking them into battle as they are is a good way to get a feel for the game.</p>
+
+      <h3>2. Build an army</h3>
+      <p>An army is up to ten of your squads placed on a 7×7 grid. The lower the row number, the further forward that squad deploys. You may use the same squad as many times as you like, and you do not need all ten — one squad is enough to march out.</p>
+      <p>Do not forget to <strong>place your strategist</strong>. Choose one of the squads and put the strategist on an empty cell within it; until you do, the army cannot be deployed.</p>
+
+      <h3>3. Fight</h3>
+      <p>On the battlefield, <strong>selecting a squad and telling it where to go is the only thing you do</strong>. Attacking happens automatically. Touch (or click) a squad and swipe (or drag) to the place you want it to go. Pinch or use the wheel to zoom.</p>
+
+      <h2>Unit stats</h2>
+      <p>There are seven kinds of soldier. These are the in-game base values.</p>
+      <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Unit</th><th class="num">Cost</th><th class="num">HP</th><th class="num">Attack</th><th class="num">Range</th><th class="num">Interval</th><th class="num">Speed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Shieldbearer</td><td class="num">1</td><td class="num">200</td><td class="num">5</td><td class="num">1.0</td><td class="num">1.0s</td><td class="num">0.8</td></tr>
+          <tr><td>Swordsman</td><td class="num">1</td><td class="num">100</td><td class="num">10</td><td class="num">1.0</td><td class="num">1.0s</td><td class="num">1.0</td></tr>
+          <tr><td>Spearman</td><td class="num">1</td><td class="num">100</td><td class="num">10</td><td class="num">1.5</td><td class="num">1.5s</td><td class="num">1.0</td></tr>
+          <tr><td>Archer</td><td class="num">1</td><td class="num">80</td><td class="num">8</td><td class="num">8.0</td><td class="num">2.5s</td><td class="num">1.0</td></tr>
+          <tr><td>Cavalry (sword)</td><td class="num">2</td><td class="num">100</td><td class="num">10</td><td class="num">1.0</td><td class="num">1.0s</td><td class="num">3.0</td></tr>
+          <tr><td>Cavalry (spear)</td><td class="num">2</td><td class="num">100</td><td class="num">10</td><td class="num">1.5</td><td class="num">1.5s</td><td class="num">3.0</td></tr>
+          <tr><td>Horse Archer</td><td class="num">2</td><td class="num">80</td><td class="num">8</td><td class="num">8.0</td><td class="num">2.5s</td><td class="num">3.0</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>A range of "1.0" is the width of one cell on the formation grid. A bow's range of 8 means it can shoot an enemy eight cells away.</p>
+
+      <h2>Five rules that decide battles</h2>
+
+      <h3>Flanks take double, backs take triple</h3>
+      <p>Damage depends on the angle of the attack. The 45 degrees to either side of straight ahead count as the front, anything beyond 135 degrees counts as the rear, and the rest is the flank. <strong>Attacks from the flank deal double damage, and attacks from the rear deal triple.</strong> Getting cavalry around the side or back of a squad that is locked in a frontal fight changes the outcome completely, with no extra troops. The reverse is just as true: leaving your own squads with their backs to the enemy is the most dangerous thing you can do.</p>
+
+      <h3>A squad moves at the speed of its slowest soldier</h3>
+      <p>Squads hold their formation and move as one body, so <strong>squad speed equals the lowest speed among its members</strong>. Mix a single shieldbearer at speed 0.8 into a squad of cavalry at 3.0 and the whole squad walks at 0.8. The strategist has a fixed speed of 1.0 and is included in that calculation, so a cavalry squad carrying the strategist drops to 1.0. If you want a squad to be fast, keep it pure.</p>
+
+      <h3>Combat starts on its own</h3>
+      <p>A waiting squad engages automatically when an enemy enters its longest weapon range, or comes within a distance of 5.0. A squad containing bows reacts at range 8, which means it can stop far earlier than you intended. When you want to push the front line forward, moving your archers and your melee squads separately is much easier to control.</p>
+
+      <h3>Arrows can miss</h3>
+      <p>An arrow flies straight toward the point it was aimed at when it was loosed. It does not track. If an enemy is within 0.5 cells of where it lands, it hits; otherwise it misses. In other words, <strong>fast-moving cavalry can outrun arrows</strong>. Bows are at their best against a stationary, tightly packed enemy. There is no line-of-sight blocking, so archers can shoot over the heads of your own troops.</p>
+
+      <h3>Formations remember their facing</h3>
+      <p>When you LOCK a soldier's facing on the formation screen, that angle is stored <em>relative to the front of the squad</em>. In battle it is applied against whichever way the squad is currently facing, so formations that point soldiers outward in every direction — Square, Testudo — keep their all-round defence even after they move and turn.</p>
+
+      <h2>Tips for building an army</h2>
+      <ul>
+        <li><strong>Keep the strategist out of the front.</strong> If the strategist falls, you lose immediately. Assigning them to a rear squad and rarely moving it is the safe play. That said, soldiers in the strategist's own squad attack at double strength, so deliberately placing them with your main force to force an early decision is a real option.</li>
+        <li><strong>Use shieldbearers as a wall.</strong> 200 HP is double anyone else's, but their attack is only 5. Shieldbearers in front with swordsmen or spearmen behind splits the job of absorbing damage from the job of dealing it.</li>
+        <li><strong>Spearmen win on reach.</strong> Range 1.5 beats a sword's 1.0, so spearmen land the first blow against a packed enemy. Their 1.5-second interval is slow, so they work better in a line than trading blows alone.</li>
+        <li><strong>Cavalry are for going around.</strong> Speed 3.0 is three times an infantryman's. Their real job is not the frontal charge but the wide sweep into the enemy's rear.</li>
+        <li><strong>Do not throw away bodies.</strong> Because the clock is decided on survivor count, squads of cost-1 infantry carry real weight in a battle that goes the distance.</li>
+      </ul>
+
+      <h2>Playing against others</h2>
+      <p>SINGLE PLAY gives you battles of two to four players against AI. In MULTI PLAY you can share the six-character room code you are issued, or use random matching to be paired automatically with someone who is waiting. Four-player battles can also be played as 2-vs-2 teams. In a team battle you keep playing even if your ally's strategist falls, but your side's movement speed drops by 20%, and you lose once both strategists are down.</p>
+
+      <a class="play-link" href="/games/strategists-war/">Play Strategists’ War</a>
+    </main>
+    <footer class="site-footer">
+      <nav>
+        <a href="/">Home</a><a href="/guides/stacked-formula/en/">How to play Stacked Formula</a><a href="/privacy/">Privacy Policy</a><a href="/contact/">Contact</a>
+      </nav>
+      <div>© 2026 Palm Joy Game Park</div>
+    </footer>
+  </body>
+</html>

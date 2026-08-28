@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- 文章ページはJSを持たない素のHTMLなので、万一ビルドを通さずに配信されても
+         文字が化けないよう charset だけ明示しておく（重複しても先頭の指定が使われる）。 -->
+    <meta charset="UTF-8" />
+    <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
+         vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
+    <title>How to Play Stacked Formula | Palm Joy Game Park</title>
+    <meta name="description" content="How to play Stacked Formula, a mental-arithmetic time attack. Learn why every answer is a single digit, how the six levels differ, and how to read ahead to cut your time." />
+    <link rel="canonical" href="https://palm-joy-game-park.com/guides/stacked-formula/en/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/guides/stacked-formula/en/" />
+    <meta property="og:title" content="How to Play Stacked Formula | Palm Joy Game Park" />
+    <meta property="og:description" content="Why every answer is a single digit, how the six levels differ, and how to read ahead to cut your time." />
+    <!-- 日本語版と英語版は別URL。検索エンジンに対応関係を伝える -->
+    <link rel="alternate" hreflang="ja" href="https://palm-joy-game-park.com/guides/stacked-formula/" />
+    <link rel="alternate" hreflang="en" href="https://palm-joy-game-park.com/guides/stacked-formula/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://palm-joy-game-park.com/guides/stacked-formula/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#090b18">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Palm Joy Game Park">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://palm-joy-game-park.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
+    <link rel="stylesheet" crossorigin href="/assets/pages-Cfw9FDmy.css">
+  </head>
+  <body>
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a><a class="page-lang" href="/guides/stacked-formula/" hreflang="ja" lang="ja">日本語</a></header>
+    <main>
+      <h1>How to Play Stacked Formula</h1>
+      <p class="lead">Stacked Formula is a mental-arithmetic time attack: you solve expressions one after another as fast as you can. It is less about whether you can do the maths and more about how long you can keep going without your hands stopping.</p>
+
+      <a class="play-link" href="/games/stacked-formula/">Play Stacked Formula</a>
+
+      <h2>Every answer is a single digit</h2>
+      <p>The defining rule of this game is that <strong>every expression resolves to a number between 0 and 9</strong>. That means one tap on the keypad submits your answer. There is no typing "12" and then pressing a confirm button, so typing speed never decides your time. What the clock measures is purely how long it takes you to arrive at the answer.</p>
+      <p>On a computer you can also answer with the number keys on your keyboard.</p>
+
+      <h2>You can see what is coming</h2>
+      <p>The screen holds <strong>five rows of problems</strong> at a time, and the bottom one is the expression you are answering now. Each answer moves the stack down by one row. The next problem, and the one after that, are already visible. The game is built so that players who can glance at the next line while finishing the current one get faster. This is where your time is won.</p>
+
+      <h2>Levels and problem counts</h2>
+      <p>There are six levels, all unlocked from the start. They differ in how many numbers appear and which operators are used.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Label</th><th class="num">Numbers</th><th>Operators</th><th>What it feels like</th></tr></thead>
+        <tbody>
+          <tr><td>2+-</td><td class="num">2</td><td>+ −</td><td>The gentlest level. Good for warming up</td></tr>
+          <tr><td>2+-*/</td><td class="num">2</td><td>+ − × ÷</td><td>Getting used to multiplication and division</td></tr>
+          <tr><td>3+-</td><td class="num">3</td><td>+ −</td><td>Practice at chaining two steps</td></tr>
+          <tr><td>3+-*/</td><td class="num">3</td><td>+ − × ÷</td><td>Operator precedence starts to matter</td></tr>
+          <tr><td>4+-</td><td class="num">4</td><td>+ −</td><td>You have to hold numbers in your head</td></tr>
+          <tr><td>4+-*/</td><td class="num">4</td><td>+ − × ÷</td><td>The hardest level</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p>You can choose 20, 30 or 50 problems per run. Best times are recorded <strong>for each combination of level and problem count</strong>, so "3+- with 20 problems" and "3+- with 50 problems" are tracked separately.</p>
+
+      <h2>Rules of the expressions</h2>
+      <ul>
+        <li>The numbers used run from <strong>1 to 9</strong>. Zero never appears as a term.</li>
+        <li>Standard precedence applies: <strong>× and ÷ first</strong>, then left to right among equals. There are no parentheses.</li>
+        <li>Division <strong>always comes out even</strong>. You will never see a fraction or a remainder.</li>
+        <li>Intermediate results may be two digits or negative. Only the final answer has to land between 0 and 9, so expressions such as "9+8−9" or "1−2+3" do appear.</li>
+        <li>On levels that include × and ÷, <strong>every expression contains at least one × or ÷</strong>. Pure addition-and-subtraction expressions are never mixed in.</li>
+      </ul>
+
+      <h2>The penalty for a wrong answer</h2>
+      <p>A wrong answer <strong>locks the keypad for one second</strong>, and the problem stays on the stack. Guessing costs you twice over: you wait, and the problem count does not go down. When only a few problems remain, taking a breath and pressing with certainty usually finishes the run faster.</p>
+
+      <h2>Five ways to cut your time</h2>
+      <ol>
+        <li><strong>Read the next line while solving the current one.</strong> This matters more than anything else. Starting a problem from scratch after each tap, versus having already read it, is worth close to half a second per problem — around 25 seconds over a 50-problem run.</li>
+        <li><strong>On × ÷ levels, find the operator first.</strong> Since at least one × or ÷ is guaranteed, locating it and resolving that part first makes the whole expression fall into place.</li>
+        <li><strong>Use the fact that the answer is one digit.</strong> If an expression opens with "8×7", you know a large division or subtraction has to follow. Sometimes you can narrow the answer down before finishing the arithmetic.</li>
+        <li><strong>Warm up on a short level.</strong> A few runs of 2+- with 20 problems settle your fingers onto the keypad and cut mistaps.</li>
+        <li><strong>Match the keypad to your habits.</strong> In settings you can switch between the calculator layout (789 on top) and the phone layout (123 on top). Choosing the one you already use every day visibly reduces mistakes.</li>
+      </ol>
+
+      <h2>Records and ranking</h2>
+      <p>Best times are saved on your device and submitted to the online ranking. The ranking screen shows the top 20 and your own position for each level and problem count. The pyramid on the result screen also shows roughly where you sit among all players.</p>
+      <p>You can optionally link a Google account from the settings screen to tie your records to that account. The link is used only to carry records across devices — no mail is sent and no contact details are collected. If the account already holds records, you will be asked to confirm before this device's records are replaced by the account's.</p>
+
+      <h2>A small thing to find</h2>
+      <p>An ink-painted owl is perched above the start button. Tap it and it flies off — but the game quietly counts how many times in a row you managed it. Reach five and a new item appears in the settings screen.</p>
+
+      <a class="play-link" href="/games/stacked-formula/">Play Stacked Formula</a>
+    </main>
+    <footer class="site-footer">
+      <nav>
+        <a href="/">Home</a><a href="/guides/strategists-war/en/">How to play Strategists’ War</a><a href="/privacy/">Privacy Policy</a><a href="/contact/">Contact</a>
+      </nav>
+      <div>© 2026 Palm Joy Game Park</div>
+    </footer>
+  </body>
+</html>
