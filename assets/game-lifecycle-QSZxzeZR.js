@@ -1,0 +1,1 @@
+var e={},t=!1,n=!1;function r(e){try{e?.()}catch{}}function i(){t||(t=!0,r(e.loadingStart))}function a(){t&&(t=!1,r(e.loadingStop))}function o(){n||(n=!0,r(e.gameplayStart))}function s(){n&&(n=!1,r(e.gameplayStop))}export{a as i,s as n,i as r,o as t};

@@ -1,0 +1,1 @@
+import{CanvasRenderer as e}from"./lib-Bek882ya.js";export{e as CanvasRenderer};

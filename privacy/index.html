@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
 
-    <!-- 文章ページはJSを持たない素のHTMLなので、万一ビルドを通さずに配信されても
-         日本語が化けないよう charset だけ明示しておく（重複しても先頭の指定が使われる）。 -->
+    <!-- 万一ビルドを通さずに配信されても日本語が化けないよう charset だけ明示しておく
+         （重複しても先頭の指定が使われる）。 -->
     <meta charset="UTF-8" />
     <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
          vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
@@ -17,6 +17,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#090b18">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Palm Joy">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Palm Joy Game Park">
     <meta property="og:locale" content="ja_JP">
@@ -26,10 +31,19 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="google-adsense-account" content="ca-pub-5453239432432003">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
-    <link rel="stylesheet" crossorigin href="/assets/pages-Cfw9FDmy.css">
+    <script type="module" crossorigin src="/assets/rolldown-runtime-hePW80VL.js"></script>
+    <script type="module" crossorigin src="/assets/jsx-runtime-DE3RlOCf.js"></script>
+    <script type="module" crossorigin src="/assets/src-BuEy9DVt.js"></script>
+    <script type="module" crossorigin src="/assets/SoundToggle-DCXTIXUj.js"></script>
+    <script type="module" crossorigin src="/assets/home-bgm-BcHODM6I.js"></script>
+    <script type="module" crossorigin src="/assets/main-FDubr6IY.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/src-BepQIb0g.css">
+    <link rel="stylesheet" crossorigin href="/assets/pages-DIpznJZs.css">
   </head>
-  <body>
-    <header class="page-header"><a href="/">← Palm Joy Game Park</a></header>
+  <!-- poster-page: ホーム（タイトル画面）と同じポスター背景（CSS）と同じBGM（下の script）を使う。
+       音量ボタンは #page-sound に src/pages/main.tsx が置く。 -->
+  <body class="poster-page">
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a><span class="sound-ticket" id="page-sound"></span></header>
     <main>
       <h1>プライバシーポリシー</h1>
       <p class="lead">Palm Joy Game Park（以下「当サイト」）における、利用者の情報の取り扱いについて説明します。</p>
