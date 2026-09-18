@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ゲームを追加したら、このファイルにも <url> を足すこと（ゲーム本体・遊び方ページ日本語版・同英語版の3件）。 -->
+<!-- ゲームを追加したら、このファイルにも <url> を足すこと（ゲーム本体・遊び方ページ日本語版・同英語版の3件）。
+     プライバシーポリシーとお問い合わせも日本語版と英語版（en/）の2件ずつある。 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://palm-joy-game-park.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://palm-joy-game-park.com/games/strategists-war/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -9,5 +10,7 @@
   <url><loc>https://palm-joy-game-park.com/guides/stacked-formula/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://palm-joy-game-park.com/guides/stacked-formula/en/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://palm-joy-game-park.com/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://palm-joy-game-park.com/privacy/en/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://palm-joy-game-park.com/contact/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://palm-joy-game-park.com/contact/en/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

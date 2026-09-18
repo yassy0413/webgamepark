@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
 
-    <!-- 万一ビルドを通さずに配信されても日本語が化けないよう charset だけ明示しておく
+    <!-- 万一ビルドを通さずに配信されても文字が化けないよう charset だけ明示しておく
          （重複しても先頭の指定が使われる）。 -->
     <meta charset="UTF-8" />
     <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
          vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
-    <title>お問い合わせ | Palm Joy Game Park</title>
-    <meta name="description" content="Palm Joy Game Park へのお問い合わせフォーム。ゲームの不具合報告やご意見はこちらから。個別の返信は行っていません。" />
-    <link rel="canonical" href="https://palm-joy-game-park.com/contact/" />
-    <meta property="og:url" content="https://palm-joy-game-park.com/contact/" />
-    <meta property="og:title" content="お問い合わせ | Palm Joy Game Park" />
-    <meta property="og:description" content="ゲームの不具合報告やご意見はこちらから。個別の返信は行っていません。" />
+    <title>Contact | Palm Joy Game Park</title>
+    <meta name="description" content="Contact form for Palm Joy Game Park. Report a bug or send us your thoughts. We read everything, but we do not reply individually." />
+    <link rel="canonical" href="https://palm-joy-game-park.com/contact/en/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/contact/en/" />
+    <meta property="og:title" content="Contact | Palm Joy Game Park" />
+    <meta property="og:description" content="Report a bug or send us your thoughts. We read everything, but we do not reply individually." />
     <!-- 日本語版と英語版は別URL。検索エンジンに対応関係を伝える -->
     <link rel="alternate" hreflang="ja" href="https://palm-joy-game-park.com/contact/" />
     <link rel="alternate" hreflang="en" href="https://palm-joy-game-park.com/contact/en/" />
@@ -47,34 +47,36 @@
   <!-- poster-page: ホーム（タイトル画面）と同じポスター背景（CSS）と同じBGM（下の script）を使う。
        音量ボタンは #page-sound に src/pages/main.tsx が置く。 -->
   <body class="poster-page">
-    <header class="page-header"><a href="/">← Palm Joy Game Park</a><span class="page-header-right"><a class="page-lang" href="/contact/en/" hreflang="en" lang="en">English</a><span class="sound-ticket" id="page-sound"></span></span></header>
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a><span class="page-header-right"><a class="page-lang" href="/contact/" hreflang="ja" lang="ja">日本語</a><span class="sound-ticket" id="page-sound"></span></span></header>
     <main>
-      <h1>お問い合わせ</h1>
-      <p class="lead">ゲームの不具合の報告、ご意見・ご要望、掲載内容についてのご連絡は、以下のフォームからお送りください。</p>
+      <h1>Contact</h1>
+      <p class="lead">To report a bug, send us your thoughts or ask about something published here, please use the form below.</p>
 
-      <p>いただいた内容はすべて確認し、今後の制作や修正の参考にしています。ただし、<strong>個別のご返信は行っていません</strong>のであらかじめご了承ください。お返事は差し上げられませんので、連絡先の記入は不要です。</p>
+      <p>We read everything that arrives and use it when deciding what to build and fix next. Please note, though, that <strong>we do not reply to messages individually</strong>. Since no reply is coming, there is no need to include your contact details.</p>
 
       <div class="note">
-        不具合の報告をいただく際は、<strong>どのゲームのどの画面で起きたか</strong>を具体的に書いていただけると、原因を特定しやすくなり助かります。お使いの端末とブラウザは、フォーム内の項目にご記入ください。
+        When reporting a bug, it helps enormously if you say <strong>which game and which screen</strong> it happened on. There are fields in the form for your device and browser.
       </div>
 
-      <h2>フォーム</h2>
-      <!-- Googleフォームの埋め込み。フォームを差し替えるときは、フォーム編集画面の
-           [送信] → <> タブに表示される iframe の src をここに貼り替える。 -->
+      <h2>Form</h2>
+      <p>The form is written in Japanese, but please feel free to write your message in English — we read both.</p>
+      <!-- Googleフォームの埋め込み。日本語版（site/contact/index.html）と同じフォームを使う。
+           フォームを差し替えるときは、フォーム編集画面の [送信] → <> タブに表示される
+           iframe の src を、日本語版とこのページの両方に貼り替える。 -->
       <iframe
         class="form-frame"
         src="https://docs.google.com/forms/d/e/1FAIpQLScMj4UEetRpBWoETnl-iF-HcfzlH8jarK28qkzjUilXQ4n7mA/viewform?embedded=true"
-        title="お問い合わせフォーム"
+        title="Contact form"
         loading="lazy"
-        >読み込んでいます…</iframe>
+        >Loading…</iframe>
 
-      <p style="font-size:13px;color:#4a5f72;">フォームが表示されない場合は、ブラウザの拡張機能や設定によって埋め込みがブロックされている可能性があります。その場合はお手数ですが、別のブラウザからお試しください。</p>
+      <p style="font-size:13px;color:#4a5f72;">If the form does not appear, a browser extension or setting may be blocking the embed. In that case, please try another browser.</p>
 
-      <p>送信いただいた内容の取り扱いについては、<a href="/privacy/">プライバシーポリシー</a>をご確認ください。</p>
+      <p>For how we handle what you send, please see our <a href="/privacy/en/">privacy policy</a>.</p>
     </main>
     <footer class="site-footer">
       <nav>
-        <a href="/">ホーム</a><a href="/privacy/">プライバシーポリシー</a>
+        <a href="/">Home</a><a href="/privacy/en/">Privacy Policy</a>
       </nav>
       <div>© 2026 Palm Joy Game Studio</div>
     </footer>

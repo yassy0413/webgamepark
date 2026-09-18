@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- 万一ビルドを通さずに配信されても文字が化けないよう charset だけ明示しておく
+         （重複しても先頭の指定が使われる）。 -->
+    <meta charset="UTF-8" />
+    <!-- 他の共通 head（viewport / favicon / OGP共通分 / AdSense）は
+         vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
+    <title>Privacy Policy | Palm Joy Game Park</title>
+    <meta name="description" content="The privacy policy of Palm Joy Game Park: how advertising, analytics, and the data our games store on your device are handled." />
+    <link rel="canonical" href="https://palm-joy-game-park.com/privacy/en/" />
+    <meta property="og:url" content="https://palm-joy-game-park.com/privacy/en/" />
+    <meta property="og:title" content="Privacy Policy | Palm Joy Game Park" />
+    <meta property="og:description" content="How advertising, analytics, and the data our games store on your device are handled." />
+    <!-- 日本語版と英語版は別URL。検索エンジンに対応関係を伝える -->
+    <link rel="alternate" hreflang="ja" href="https://palm-joy-game-park.com/privacy/" />
+    <link rel="alternate" hreflang="en" href="https://palm-joy-game-park.com/privacy/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://palm-joy-game-park.com/privacy/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#090b18">
+    <link rel="icon" type="image/png" href="/app-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/app-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Palm Joy">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Palm Joy Game Park">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://palm-joy-game-park.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="google-adsense-account" content="ca-pub-5453239432432003">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
+    <script type="module" crossorigin src="/assets/rolldown-runtime-hePW80VL.js"></script>
+    <script type="module" crossorigin src="/assets/jsx-runtime-DE3RlOCf.js"></script>
+    <script type="module" crossorigin src="/assets/src-BuEy9DVt.js"></script>
+    <script type="module" crossorigin src="/assets/SoundToggle-DCXTIXUj.js"></script>
+    <script type="module" crossorigin src="/assets/home-bgm-BcHODM6I.js"></script>
+    <script type="module" crossorigin src="/assets/main-FDubr6IY.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/src-BepQIb0g.css">
+    <link rel="stylesheet" crossorigin href="/assets/pages-DcK-LEr1.css">
+  </head>
+  <!-- poster-page: ホーム（タイトル画面）と同じポスター背景（CSS）と同じBGM（下の script）を使う。
+       音量ボタンは #page-sound に src/pages/main.tsx が置く。 -->
+  <body class="poster-page">
+    <header class="page-header"><a href="/">← Palm Joy Game Park</a><span class="page-header-right"><a class="page-lang" href="/privacy/" hreflang="ja" lang="ja">日本語</a><span class="sound-ticket" id="page-sound"></span></span></header>
+    <main>
+      <h1>Privacy Policy</h1>
+      <p class="lead">This page explains how Palm Joy Game Park (“this site”) handles information about the people who use it.</p>
+
+      <h2>About this site</h2>
+      <p>This site is where Palm Joy Game Studio publishes small games you can play in a browser. No account is needed, every game is free to play, and we do not sell any goods or services.</p>
+      <table>
+        <tbody>
+          <tr><th>Site name</th><td>Palm Joy Game Park</td></tr>
+          <tr><th>URL</th><td>https://palm-joy-game-park.com/</td></tr>
+          <tr><th>Operated by</th><td>Palm Joy Game Studio</td></tr>
+          <tr><th>Contact</th><td><a href="/contact/en/">Contact form</a></td></tr>
+        </tbody>
+      </table>
+
+      <h2>Advertising</h2>
+      <p>This site uses Google AdSense, a third-party advertising service.</p>
+      <p>Third-party vendors such as Google may use cookies to serve ads based on your past visits to this site or to other sites. These are called personalised ads, and they are used to show advertising that matches your interests.</p>
+      <p>You can turn personalised ads off in <a href="https://myadcenter.google.com/" rel="noopener noreferrer" target="_blank">Google's ad settings</a>. <a href="https://www.aboutads.info/choices/" rel="noopener noreferrer" target="_blank">aboutads.info</a> also explains how to opt out of cookies used by third-party vendors.</p>
+      <p>For more on how cookies are used, please also see <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer" target="_blank">Advertising – Policies &amp; Terms – Google</a>.</p>
+
+      <h2>Analytics</h2>
+      <p>To understand how the site is used, we use Google Analytics (Google Analytics for Firebase). It collects anonymous statistics such as which pages were viewed, which games were played, the approximate region, and the type of device and browser in use. It is not configured to collect information that identifies you personally, such as your name or address.</p>
+      <p>We use what is collected only to learn which games are being played and to improve the site.</p>
+
+      <h2>What the games store</h2>
+      <h3>Stored on your device</h3>
+      <p>Game settings, best times, the squads you have built and similar data are saved in your browser's localStorage. They stay on your own device, and the people who run this site cannot read them. Clearing site data in your browser erases them as well. What is stored is:</p>
+      <ul>
+        <li>Your display language (Japanese / English)</li>
+        <li>Your sound settings</li>
+        <li>In-game data such as best times, squad data and player names</li>
+      </ul>
+
+      <h3>Sent for the online ranking</h3>
+      <p>Only if you use the online ranking in Stacked Formula, the following is stored in Google Firebase (Cloud Firestore).</p>
+      <ul>
+        <li>The <strong>player name</strong> you set in the game (“Player” by default)</li>
+        <li>Your clear time, together with the level and number of problems it applies to</li>
+        <li>An <strong>anonymous ID</strong> that identifies the device (issued automatically by Firebase anonymous authentication; it is not linked to a name or an email address)</li>
+      </ul>
+      <p>Player names are shown publicly in the ranking, so please avoid entering your real name or anything else you would rather not share. You can change your player name at any time from the game's settings screen.</p>
+      <p>In online matches of Strategists' War, a room code and a display name are stored temporarily so that opponents can find each other. The match itself is communicated directly between the players' browsers.</p>
+
+      <h3>Linking a Google account</h3>
+      <p>In Stacked Formula you may optionally link a Google account so that your records carry over between devices. The link is <strong>used only to associate your records</strong>; we do not send email or collect contact details. Linking happens only when you choose to do it, and every game is fully playable without it.</p>
+
+      <h2>The contact form</h2>
+      <p>Our contact form is a Google Form. What you send is processed on Google's servers, and the people who run this site use it only to read your message and improve the site. It is not used for any other purpose and is not provided to third parties. Please note that we do not reply to messages individually.</p>
+
+      <h2>Disclaimer</h2>
+      <p>The games on this site are provided free of charge. We take care over the information published here and over how the games behave, but we cannot accept liability for damages arising from their use. Nor can we accept liability for information or services provided by sites you reach from here.</p>
+
+      <h2>Copyright</h2>
+      <p>The games, text, images and audio published on this site are the copyright of Palm Joy Game Studio. Please do not reproduce or redistribute them without permission.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>This policy may be changed without notice whenever that becomes necessary. Any change applies from the moment it is published on this page.</p>
+
+      <p style="margin-top:32px;color:#4a5f72;font-size:13px;">Established: 29 August 2026</p>
+    </main>
+    <footer class="site-footer">
+      <nav>
+        <a href="/">Home</a><a href="/contact/en/">Contact</a>
+      </nav>
+      <div>© 2026 Palm Joy Game Studio</div>
+    </footer>
+  </body>
+</html>
