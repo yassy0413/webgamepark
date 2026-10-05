@@ -13,6 +13,28 @@
     <meta property="og:title" content="軍師大戦 | Palm Joy Game Park" />
     <meta property="og:description" content="軍師として部隊を編成し、陣形を駆使して敵の軍師を討とう！" />
     <!-- SITE-ONLY:END -->
+    <!-- 読み込み中の表示（rts_ui_v3）。React がマウントすると #root の中身ごと置き換わる。
+         言語はまだ決まっていないので日英を併記する。ポータル版の BootstrapMessage（main.tsx）も同じクラスで描く。
+         地の色はゲームの焦げ茶にして、共通 CSS（:root の濃紺）が読み込まれても瞬かないようにする -->
+    <style>
+      html:root,body{background:#1d130c}
+      .rts-boot{box-sizing:border-box;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;
+        color:#3a2a16;font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+        background:radial-gradient(ellipse at 50% 42%,#3a2716,#22170e 55%,#150d08)}
+      .rts-boot-emblem{display:grid;place-items:center;width:132px;height:132px;border-radius:50%;
+        background:radial-gradient(circle at 40% 32%,#3c2717,#1c120b 70%);border:3px solid #d9a94e;
+        box-shadow:0 0 0 2px #5a3f1c,0 0 0 6px #b98d4a55,0 0 26px #d9a94e44,inset 0 0 18px #000a}
+      .rts-boot-emblem img{display:block;width:96px;height:96px;object-fit:contain}
+      .rts-boot-card{margin:0;padding:10px 26px;display:flex;flex-direction:column;align-items:center;gap:2px;
+        background:linear-gradient(#f4e8c6,#e4cfa0 58%,#d2b582);border:1px solid #f6ead0;outline:1px solid #8f6835;outline-offset:2px;
+        box-shadow:0 4px 12px #000a;font-weight:700;letter-spacing:.12em;text-align:center}
+      .rts-boot-card span:first-child{font-size:16px}
+      .rts-boot-card span+span{font-size:12px;color:#5c4526;letter-spacing:.08em}
+      .rts-boot-bar{width:min(240px,64vw);height:6px;border:1px solid #b98d4a;background:#120b07 repeating-linear-gradient(90deg,#0000 0 40px,#d9a94e 40px 90px,#0000 90px 160px) 0 0/160px 100%;
+        box-shadow:0 0 0 1px #000a;animation:rts-boot-slide 1.4s linear infinite}
+      @keyframes rts-boot-slide{to{background-position:160px 0}}
+      @media (prefers-reduced-motion:reduce){.rts-boot-bar{animation:none}}
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#090b18">
     <link rel="icon" type="image/png" href="/app-icon.png">
@@ -30,15 +52,17 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="google-adsense-account" content="ca-pub-5453239432432003">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="/assets/strategists-war-BqURtr5Q.js"></script>
+    <script type="module" crossorigin src="/assets/strategists-war-BVknvWGc.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-hePW80VL.js">
     <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-DE3RlOCf.js">
     <link rel="modulepreload" crossorigin href="/assets/src-BuEy9DVt.js">
     <link rel="modulepreload" crossorigin href="/assets/runtime-DRHALcRS.js">
+    <link rel="modulepreload" crossorigin href="/assets/storage-BNn1QRcv.js">
+    <link rel="modulepreload" crossorigin href="/assets/lang-B2v4wNhE.js">
     <link rel="modulepreload" crossorigin href="/assets/game-lifecycle-QSZxzeZR.js">
     <link rel="stylesheet" crossorigin href="/assets/src-BepQIb0g.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="rts-boot" role="status" aria-live="polite"><div class="rts-boot-emblem"><img src="/assets/menu_art_how_to_feather_fan-CFpvqJd7.webp" alt="" width="512" height="512" /></div><p class="rts-boot-card"><span lang="ja">出陣準備中…</span><span lang="en">Preparing…</span></p><div class="rts-boot-bar" aria-hidden="true"></div></div></div>
   </body>
 </html>
