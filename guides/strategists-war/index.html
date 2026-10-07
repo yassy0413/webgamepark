@@ -10,6 +10,8 @@
          vite.config.ts の sharedHead プラグインが注入する。ここにはページ固有のものだけ書く。 -->
     <title>軍師大戦の遊び方とコツ | Palm Joy Game Park</title>
     <meta name="description" content="ブラウザRTS「軍師大戦」の遊び方。部隊の編成、兵種ごとの性能、側面・背面攻撃の倍率、陣形の使い分けまでまとめて解説します。" />
+    <!-- ブラウザの枠（Android のアドレスバー等）の色。ページの地の色（ヘッダー帯の紺）に合わせる。PROJECT.md 第12条 -->
+    <meta name="theme-color" content="#17344b" />
     <link rel="canonical" href="https://palm-joy-game-park.com/guides/strategists-war/" />
     <meta property="og:url" content="https://palm-joy-game-park.com/guides/strategists-war/" />
     <meta property="og:title" content="軍師大戦の遊び方とコツ | Palm Joy Game Park" />
@@ -18,14 +20,14 @@
     <link rel="alternate" hreflang="ja" href="https://palm-joy-game-park.com/guides/strategists-war/" />
     <link rel="alternate" hreflang="en" href="https://palm-joy-game-park.com/guides/strategists-war/en/" />
     <link rel="alternate" hreflang="x-default" href="https://palm-joy-game-park.com/guides/strategists-war/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#090b18">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <link rel="icon" type="image/png" href="/app-icon.png">
     <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="apple-touch-icon" href="/app-icon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Palm Joy">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Palm Joy Game Park">
     <meta property="og:locale" content="ja_JP">
@@ -33,9 +35,49 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1320x2868.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2868x1320.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1206x2622.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2622x1206.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1260x2736.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2736x1260.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1290x2796.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2796x1290.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1179x2556.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2556x1179.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1284x2778.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2778x1284.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1170x2532.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2532x1170.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1125x2436.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2436x1125.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1242x2688.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2688x1242.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/828x1792.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/1792x828.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/splash/1242x2208.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/splash/2208x1242.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/750x1334.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/1334x750.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/2048x2732.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2732x2048.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/2064x2752.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2752x2064.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/1668x2388.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2388x1668.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/1668x2420.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2420x1668.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/1640x2360.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2360x1640.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/1620x2160.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2160x1620.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/1488x2266.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2266x1488.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/splash/1536x2048.png">
+    <link rel="apple-touch-startup-image" media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/splash/2048x1536.png">
     <meta name="google-adsense-account" content="ca-pub-5453239432432003">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453239432432003" crossorigin="anonymous"></script>
-    <link rel="stylesheet" crossorigin href="/assets/pages-DcK-LEr1.css">
+    <link rel="stylesheet" crossorigin href="/assets/pages-3RUP4t7v.css">
   </head>
   <body>
     <header class="page-header"><a href="/">← Palm Joy Game Park</a><a class="page-lang" href="/guides/strategists-war/en/" hreflang="en" lang="en">English</a></header>
@@ -113,6 +155,13 @@
 
       <h2>対戦のしかた</h2>
       <p>SINGLE PLAY ではAIを相手に2〜4人の戦いができます。MULTI PLAY では、発行された6文字のルームコードを相手に伝えて対戦するほか、ランダムマッチで待機中の相手と自動的につながることもできます。4人戦では2対2のチーム戦も選べます。チーム戦では味方の軍師が倒れても操作は続けられますが、自軍の移動速度が20%下がり、両方の軍師が倒れた時点で敗北です。</p>
+
+      <h2>ホーム画面に追加して遊ぶ</h2>
+      <p>iPhone / Android では、ブラウザの共有メニューから<strong>「ホーム画面に追加」</strong>すると、アプリのように全画面で遊べます。一度開いたページは端末に保存されるので、電波のない場所でも SINGLE PLAY を遊べます（MULTI PLAY は通信が必要です）。</p>
+      <div class="note">
+        <p>iPhone では、<strong>Safari で開いたときとホーム画面から開いたときで保存先が別</strong>になります。部隊・軍の編成やプレイヤー名は共有されず、一方から他方へ引き継ぐ機能もありません。ホーム画面に追加したら、以後はそちらで遊ぶことをおすすめします。</p>
+        <p>Safari で保存した編成は、1 週間ほどサイトを開かないと iOS が消してしまうことがあります。ホーム画面版ではこの削除は起きにくくなっています。</p>
+      </div>
 
       <a class="play-link" href="/games/strategists-war/">軍師大戦をプレイする</a>
     </main>
