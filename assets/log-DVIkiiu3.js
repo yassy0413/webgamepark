@@ -1,0 +1,1 @@
+function e(e,t,n){return[...e.filter(e=>e.turn!==t.turn),t].sort((e,t)=>e.turn-t.turn).slice(-Math.max(1,n))}function t(e,t){let n=e.length>0?e[0].turn:t;return n>1?{from:1,to:n-1}:null}export{t as n,e as t};

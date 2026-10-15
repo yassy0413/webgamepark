@@ -1,0 +1,1 @@
+function e(){try{let e=navigator.audioSession;e&&e.type!==`ambient`&&(e.type=`ambient`)}catch{}}export{e as t};
