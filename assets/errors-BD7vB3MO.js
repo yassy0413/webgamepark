@@ -1,0 +1,1 @@
+var e=[`network`,`http`,`budget`,`safety`,`key`,`unavailable`,`image_missing`,`schema`,`model`,`bad_request`,`forbidden`,`method`,`internal`];function t(t){return e.some(e=>e===t)}var n=class extends Error{code;status;constructor(e,t,n=null){super(t),this.name=`AiError`,this.code=e,this.status=n}};export{t as n,n as t};

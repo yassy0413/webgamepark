@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-hePW80VL.js";var t=`/assets/fake_world_board-Ca78k8Te.jpg`,n=`/assets/fake_world_floor-Duesoj04.jpg`,r=e({FAKE_WORLD_ART:()=>i}),i={board:t,floor:n};export{r as n,i as t};

@@ -1,0 +1,1 @@
+function e(e){let t=new Uint32Array(1);return crypto.getRandomValues(t),Math.floor(t[0]/2**32*e)}function t(t,n){let r=[...t],i=Math.min(n,r.length);for(let t=0;t<i;t++){let n=t+e(r.length-t);[r[t],r[n]]=[r[n],r[t]]}return r.slice(0,i)}function n(){let e=new Uint32Array(1);return crypto.getRandomValues(e),e[0]}export{e as n,n as r,t};

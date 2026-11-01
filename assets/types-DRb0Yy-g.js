@@ -1,1 +1,0 @@
-var e=[`title`,`avatars`,`avatar_select`,`avatar_create`,`avatar_image`,`world`,`lobby`,`stats`,`generating`,`play`,`ending`,`curtain`,`result`,`records`,`stage_preview`],t=[`hp`,`atk`,`dex`,`int`,`vit`,`heart`];export{t as n,e as t};
