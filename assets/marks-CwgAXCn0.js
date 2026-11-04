@@ -1,0 +1,1 @@
+function e(e,t){let n=new Set(e.filter(e=>e.human).map(e=>e.id)),r=new Map;for(let e of t)n.has(e)&&!r.has(e)&&r.set(e,r.size+1);let i=r.size===n.size,a=r.size;return e.map(e=>{if(e.human){let t=r.get(e.id);return{id:e.id,text:t===void 0?`…`:String(t)}}return{id:e.id,text:i?String(++a):`…`}})}export{e as t};

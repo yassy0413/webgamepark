@@ -1,0 +1,1 @@
+var e=`/assets/mage_standing-DS6vDH-m.webp`,t=`/assets/priest_standing-CyfF3voG.webp`,n=`/assets/swordsman_standing-CTSgeUxE.webp`;export{t as n,e as r,n as t};
