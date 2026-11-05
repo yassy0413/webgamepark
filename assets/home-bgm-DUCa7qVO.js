@@ -1,0 +1,1 @@
+import{t as e}from"./loop-bgm-On0xjV6o.js";var t=`/assets/bgm_resort_morning_breeze-LFsbHDCL.mp3`,n=.4;function r(){e(t,n)}export{r as t};
